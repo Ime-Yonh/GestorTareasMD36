@@ -19,5 +19,7 @@ export const renderTasks = () => {
             <button class="delete"> Borar </button>
             <button class="toggle"> ${task.completed === true ? "Regresar" : "Completado"} </button>
         `;
+
+        taskList.appendChild(li);
     });
 };
