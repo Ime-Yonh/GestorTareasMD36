@@ -105,17 +105,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap);"]);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `/* Estilos generales */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
+    font-family: "Inter Tight", sans-serif;
     margin: 0;
     padding: 0;
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 45px;
+    font-weight: 700;
+    color: rgb(8, 6, 133);
+    letter-spacing: 1px;
+    margin: 30px 0;
 }
 
 /* Estilos para el contenedor principal */
@@ -124,31 +134,35 @@ body {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 450px;
 }
 
 /* Estilos para el formulario */
 form {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 5px;
 }
 
 /* Estilos al input */
 input {
-    width: 75%;
-    padding: 8px;
+    
+    padding: 12px;
     margin-right: 10px;
     border: 1px solid #ddd;
-    border-radius: 3px;
+    border-radius: 25px;
+    font-size: 16px;
 }
 
 /* Estilos al boton */
-button {
+[type="submit"] {
     padding: 5px 8px;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 3px;
+    border-radius: 25px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 /* Estilos de la lista */
@@ -160,19 +174,30 @@ ul {
 /* Estilos a los elementos de la lista*/
 li { 
     background-color: #f4f4f4;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ddd;
     margin-top: 10px;
+    border-radius: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+button {
+    padding: 5px 8px;
+    background-color: #0b3d72;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 /* Estilos cuando una tarea esta completada */
 li.completed{
     text-decoration: line-through;
     color: #888;
-}`, "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA,sBAAsB;AACtB;IACI,yCAAyC;IACzC,yBAAyB;IACzB,SAAS;IACT,UAAU;IACV,aAAa;IACb,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA,yCAAyC;AACzC;IACI,uBAAuB;IACvB,aAAa;IACb,kBAAkB;IAClB,uCAAuC;AAC3C;;AAEA,+BAA+B;AAC/B;IACI,aAAa;IACb,8BAA8B;AAClC;;AAEA,qBAAqB;AACrB;IACI,UAAU;IACV,YAAY;IACZ,kBAAkB;IAClB,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA,qBAAqB;AACrB;IACI,gBAAgB;IAChB,yBAAyB;IACzB,YAAY;IACZ,YAAY;IACZ,kBAAkB;IAClB,eAAe;AACnB;;AAEA,wBAAwB;AACxB;IACI,gBAAgB;IAChB,UAAU;AACd;;AAEA,uCAAuC;AACvC;IACI,yBAAyB;IACzB,aAAa;IACb,sBAAsB;IACtB,gBAAgB;IAChB,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;AACvB;;AAEA,6CAA6C;AAC7C;IACI,6BAA6B;IAC7B,WAAW;AACf","sourcesContent":["/* Estilos generales */\r\nbody {\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    background-color: #f4f4f4;\r\n    margin: 0;\r\n    padding: 0;\r\n    height: 100vh;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n/* Estilos para el contenedor principal */\r\n#app {\r\n    background-color: white;\r\n    padding: 20px;\r\n    border-radius: 5px;\r\n    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n/* Estilos para el formulario */\r\nform {\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n/* Estilos al input */\r\ninput {\r\n    width: 75%;\r\n    padding: 8px;\r\n    margin-right: 10px;\r\n    border: 1px solid #ddd;\r\n    border-radius: 3px;\r\n}\r\n\r\n/* Estilos al boton */\r\nbutton {\r\n    padding: 5px 8px;\r\n    background-color: #007bff;\r\n    color: white;\r\n    border: none;\r\n    border-radius: 3px;\r\n    cursor: pointer;\r\n}\r\n\r\n/* Estilos de la lista */\r\nul {\r\n    list-style: none;\r\n    padding: 0;\r\n}\r\n\r\n/* Estilos a los elementos de la lista*/\r\nli { \r\n    background-color: #f4f4f4;\r\n    padding: 10px;\r\n    border: 1px solid #ddd;\r\n    margin-top: 10px;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n}\r\n\r\n/* Estilos cuando una tarea esta completada */\r\nli.completed{\r\n    text-decoration: line-through;\r\n    color: #888;\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAEA,sBAAsB;AACtB;IACI,sCAAsC;IACtC,SAAS;IACT,UAAU;IACV,aAAa;IACb,YAAY;IACZ,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,sBAAsB;AAC1B;;AAEA;IACI,eAAe;IACf,gBAAgB;IAChB,qBAAqB;IACrB,mBAAmB;IACnB,cAAc;AAClB;;AAEA,yCAAyC;AACzC;IACI,uBAAuB;IACvB,aAAa;IACb,kBAAkB;IAClB,uCAAuC;IACvC,YAAY;AAChB;;AAEA,+BAA+B;AAC/B;IACI,aAAa;IACb,8BAA8B;IAC9B,QAAQ;AACZ;;AAEA,qBAAqB;AACrB;;IAEI,aAAa;IACb,kBAAkB;IAClB,sBAAsB;IACtB,mBAAmB;IACnB,eAAe;AACnB;;AAEA,qBAAqB;AACrB;IACI,gBAAgB;IAChB,yBAAyB;IACzB,YAAY;IACZ,YAAY;IACZ,mBAAmB;IACnB,eAAe;IACf,eAAe;AACnB;;AAEA,wBAAwB;AACxB;IACI,gBAAgB;IAChB,UAAU;AACd;;AAEA,uCAAuC;AACvC;IACI,yBAAyB;IACzB,aAAa;IACb,sBAAsB;IACtB,gBAAgB;IAChB,mBAAmB;IACnB,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;AACvB;;AAEA;IACI,gBAAgB;IAChB,yBAAyB;IACzB,YAAY;IACZ,YAAY;IACZ,mBAAmB;IACnB,eAAe;IACf,eAAe;AACnB;;AAEA,6CAA6C;AAC7C;IACI,6BAA6B;IAC7B,WAAW;AACf","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');\r\n\r\n/* Estilos generales */\r\nbody {\r\n    font-family: \"Inter Tight\", sans-serif;\r\n    margin: 0;\r\n    padding: 0;\r\n    height: 100vh;\r\n    width: 100vw;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    flex-direction: column;\r\n}\r\n\r\n.title{\r\n    font-size: 45px;\r\n    font-weight: 700;\r\n    color: rgb(8, 6, 133);\r\n    letter-spacing: 1px;\r\n    margin: 30px 0;\r\n}\r\n\r\n/* Estilos para el contenedor principal */\r\n#app {\r\n    background-color: white;\r\n    padding: 20px;\r\n    border-radius: 5px;\r\n    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n    width: 450px;\r\n}\r\n\r\n/* Estilos para el formulario */\r\nform {\r\n    display: grid;\r\n    grid-template-columns: 4fr 1fr;\r\n    gap: 5px;\r\n}\r\n\r\n/* Estilos al input */\r\ninput {\r\n    \r\n    padding: 12px;\r\n    margin-right: 10px;\r\n    border: 1px solid #ddd;\r\n    border-radius: 25px;\r\n    font-size: 16px;\r\n}\r\n\r\n/* Estilos al boton */\r\n[type=\"submit\"] {\r\n    padding: 5px 8px;\r\n    background-color: #007bff;\r\n    color: white;\r\n    border: none;\r\n    border-radius: 25px;\r\n    cursor: pointer;\r\n    font-size: 16px;\r\n}\r\n\r\n/* Estilos de la lista */\r\nul {\r\n    list-style: none;\r\n    padding: 0;\r\n}\r\n\r\n/* Estilos a los elementos de la lista*/\r\nli { \r\n    background-color: #f4f4f4;\r\n    padding: 12px;\r\n    border: 1px solid #ddd;\r\n    margin-top: 10px;\r\n    border-radius: 25px;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n}\r\n\r\nbutton {\r\n    padding: 5px 8px;\r\n    background-color: #0b3d72;\r\n    color: white;\r\n    border: none;\r\n    border-radius: 25px;\r\n    cursor: pointer;\r\n    font-size: 16px;\r\n}\r\n\r\n/* Estilos cuando una tarea esta completada */\r\nli.completed{\r\n    text-decoration: line-through;\r\n    color: #888;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
